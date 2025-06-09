@@ -144,15 +144,118 @@ body {
 
 /* Hero Section */
 
-.hero-section::before {
-  width: 414px;
-  height: 217px;
-  left: 0;
-  background-image: url('../images/hand-before.svg');
-  content: '';
+.hero-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.decor-layer {
   position: absolute;
-  background-repeat: no-repeat;
-  bottom: 0;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.decor {
+  position: absolute;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  z-index: 1;
+}
+
+.hand-left {
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 217px;
+}
+
+.line-left {
+  top: 0;
+  left: 0;
+  width: 299px;
+  height: 805px;
+  z-index: -10;
+}
+
+.icon-instagram {
+  top: 350px;
+  left: 40px;
+  width: 50px;
+  height: 50px;
+}
+
+.icon-facebook {
+  top: 690px;
+  left: 120px;
+  width: 70px;
+  height: 70px;
+}
+
+.icon-youtube {
+  top: 570px;
+  left: 1450px;
+  width: 50px;
+  height: 40px;
+}
+
+.bulb1 {
+  top: 270px;
+  right: 1400px;
+  width: 55px;
+  height: 80px;
+  transform: rotate(-15deg);
+}
+
+.bulb2 {
+  bottom: 500px;
+  left: 1350px;
+  width: 85px;
+  height: 110px;
+}
+
+.underline.imaginative {
+  bottom: 450px;
+  left: 43%;
+  transform: translateX(-50%);
+  width: 627px;
+  height: 130px;
+}
+
+.underline.contact {
+  bottom: 240px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+}
+
+.hand-right {
+  bottom: 50px;
+  right: 0;
+  width: 365px;
+  height: 426px;
+}
+
+.line-right {
+  bottom: 160px;
+  right: 0px;
+  width: 335px;
+  height: 533px;
+}
+
+/* Content Layer Above Decor */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 977px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding: 0 20px;
 }
 
 .hero-title {
@@ -174,22 +277,35 @@ body {
   padding: 0 120px;
 }
 
-.hero-button {
-  color: var(--color-brand-dark);
-  background-color: var(--color-primary-pink);
-  border: 2px solid var(--color-primary-pink);
-  border-radius: 24px;
-  cursor: pointer;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 600;
-  font-size: 18px;
-  padding: 12px 32px;
-  line-height: 1.33;
-  width: 102px;
-  height: 48px;
+.hero-form {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 64px;
+  flex-wrap: wrap;
 }
 
-.hero-button:hover {
+.hero-form input[type='email'] {
+  padding: 14px 24px;
+  border-radius: 30px;
+  border: none;
+  width: 300px;
+  font-size: 16px;
+  background-color: var(--color-secondary-light);
+  box-shadow: 0 0 0 2px #eee;
+}
+
+.hero-form button {
+  padding: 14px 32px;
+  border: 2px solid var(--color-primary-pink);
+  background-color: var(--color-primary-pink);
+  color: var(--color-brand-dark);
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero-form button:hover {
   color: var(--color-brand-dark);
   background-color: transparent;
 }
